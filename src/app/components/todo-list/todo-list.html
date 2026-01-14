@@ -1,6 +1,15 @@
 <h1>Todo List</h1>
-<ul class="list-group">
+<div class="list-group">
   @for (todo of todos; track $index) {
-  <li class="list-group-item">{{ todo.testo }}</li>
+  <app-todo-item
+    class="list-group-item"
+    [todo]="todo"
+    (onRichiestaEliminazione)="eliminaTodo($event)"
+  ></app-todo-item>
   }
-</ul>
+</div>
+<hr />
+<app-todo-add (onRichiestaInserimento)="inserisciNuovoTodo($event)"></app-todo-add>
+<!-- <pre>
+  {{ todos | json }}
+</pre> -->
