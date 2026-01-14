@@ -2,12 +2,13 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TodoList } from "./components/todo-list/todo-list";
 import { AutoList } from './components/auto-list/auto-list';
+import { CarrelloMini } from "./components/carrello-mini/carrello-mini";
 
 type Pagina = "todo" | "auto" | null;
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TodoList, AutoList],
+  imports: [RouterOutlet, TodoList, AutoList, CarrelloMini],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

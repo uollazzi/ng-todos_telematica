@@ -1,10 +1,11 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Auto } from '../../models/auto';
 import { AutoService } from '../../services/auto';
+import { AutoItem } from '../auto-item/auto-item';
 
 @Component({
   selector: 'app-auto-list',
-  imports: [],
+  imports: [AutoItem],
   templateUrl: './auto-list.html',
   styleUrl: './auto-list.css',
 })
@@ -20,10 +21,7 @@ export class AutoList implements OnInit {
   autoService: AutoService = inject(AutoService);
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this.autos = this.autoService.getAutos();
-    }, 3000);
-
+    this.autos = this.autoService.getAutos();
   }
 
 }

@@ -2,10 +2,10 @@
 <div class="spinner-border" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
-} @else {
+} @if(autos.length > 0) {
 <div class="d-flex gap-2">
   @for (a of autos; track $index) {
-  <div>{{ a.modello }}</div>
+  <app-auto-item [auto]="a"></app-auto-item>
   }
 </div>
 }
