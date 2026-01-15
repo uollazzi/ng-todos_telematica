@@ -17,4 +17,9 @@ export class CarrelloFull implements OnInit {
   ngOnInit(): void {
     this.autos = this.carrelloService.autoNelCarrello;
   }
+
+  svuotaCarrello() {
+    this.carrelloService.svuotaCarrello();
+    this.autos = this.carrelloService.autoNelCarrello;
+  }
 }
