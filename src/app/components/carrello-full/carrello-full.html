@@ -1,0 +1,10 @@
+<h1>Carrello Full</h1>
+@if (autos.length == 0) {
+<p>Carrello vuoto</p>
+} @else {
+<ul class="list-group">
+  @for (a of autos; track $index) {
+  <li class="list-group-item">{{ a.marca }} {{ a.modello }} - {{ a.prezzo | currency }}</li>
+  }
+</ul>
+}

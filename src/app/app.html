@@ -19,6 +19,14 @@
     >
       Auto
     </button>
+    <button
+      type="button"
+      class="btn btn-primary"
+      [class.active]="paginaSelezionata == 'carrello'"
+      (click)="selezionaPagina('carrello')"
+    >
+      Carrello
+    </button>
   </div>
   <hr />
   @if (paginaSelezionata == "auto") {
@@ -28,6 +36,10 @@
   } @if (paginaSelezionata == "todo") {
   <section>
     <app-todo-list></app-todo-list>
+  </section>
+  } @if (paginaSelezionata == "carrello") {
+  <section>
+    <app-carrello-full></app-carrello-full>
   </section>
   }
 </div>
